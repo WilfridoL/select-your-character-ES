@@ -1,0 +1,199 @@
+// variable
+$background: linear-gradient(#040429, #090B14);
+// $backgroundImg: linear-gradient(#757070c0, #5452525e, #07070785);
+$text: #FFFFFF;
+
+@mixin text-title {
+  font-family: 'BIOWEAPON', sans-serif;
+  color: $text;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: $background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container-card {
+  display: block;
+  .img-container {
+    width: 100%;
+    display: flex;
+
+    .img {
+      width: 270px;
+      height: 450px;
+      margin: 0px 15px;
+      border: 3px solid #757575;
+      border-radius: 5px;
+      filter: grayscale(100%);
+      overflow: hidden;
+      transition: all .3s ease-in;
+      color: $text;
+      cursor: pointer;
+
+      img {
+        transition: all .3s ease-in;
+        filter: blur(0.5px);
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .img:hover {
+      filter: grayscale(0%);
+
+      img {
+        filter: blur(0px);
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .title {
+    text-align: center;
+    margin-top: 2rem;
+    @include text-title()
+  }
+}
+.container-card.active{
+  display: none;
+}
+
+.card-selected {
+  display: none;
+  padding: 0px 3%;
+
+  .content-img {
+    display: flex;
+    margin-right: 33px;
+
+    .back {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // background: red;
+      margin-right: 15px;
+      font-size: 28px;
+      color: $text;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+    }
+
+    .back:hover {
+      background: #0000009c;
+    }
+
+    .img-selected {
+      width: 350px;
+      height: 520px;
+      border: 5px solid $text;
+      border-radius: 5px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .info {
+    h2 {
+      @include text-title();
+      font-size: 36px;
+    }
+
+    p {
+      color: $text;
+      margin-top: 26px;
+      font-size: 36px;
+      font-family: sans-serif;
+      flex-wrap: wrap;
+      // letter-spacing: 2px;
+    }
+  }
+
+  .buttons {
+    .avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+
+      .gen {
+        width: 70px;
+        height: 70px;
+        background: transparent;
+        // border-radius: 50%;
+        margin-left: 30px;
+        transition: all .3s ease-in-out;
+        // overflow: hidden;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          filter: grayscale(100%);
+        }
+      }
+
+      .gen:hover {
+        transform: scale(1.2);
+
+        img {
+          filter: grayscale(0);
+        }
+      }
+
+      h4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        color: $text;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 25%;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: 60px;
+      margin-top: 20px;
+      border: 5px solid $text;
+      border-radius: 10px;
+      font-size: 1.8rem;
+      background: transparent;
+      transition: all .15s ease-in;
+      cursor: pointer;
+      @include text-title();
+    }
+
+    button:hover {
+      background: $text;
+      color: #040429;
+      transform: scale(0.98);
+    }
+
+    button:focus {
+      opacity: 70%;
+    }
+  }
+}
+.card-selected.active{
+  display: flex;
+}

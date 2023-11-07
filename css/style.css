@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#040429, #090B14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container-card {
+  display: block;
+}
+.container-card .img-container {
+  width: 100%;
+  display: flex;
+}
+.container-card .img-container .img {
+  width: 270px;
+  height: 450px;
+  margin: 0px 15px;
+  border: 3px solid #757575;
+  border-radius: 5px;
+  filter: grayscale(100%);
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.container-card .img-container .img img {
+  transition: all 0.3s ease-in;
+  filter: blur(0.5px);
+  width: 100%;
+  height: 100%;
+}
+.container-card .img-container .img:hover {
+  filter: grayscale(0%);
+}
+.container-card .img-container .img:hover img {
+  filter: blur(0px);
+  transform: scale(1.1);
+}
+.container-card .title {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: "BIOWEAPON", sans-serif;
+  color: #FFFFFF;
+}
+
+.container-card.active {
+  display: none;
+}
+
+.card-selected {
+  display: none;
+  padding: 0px 3%;
+}
+.card-selected .content-img {
+  display: flex;
+  margin-right: 33px;
+}
+.card-selected .content-img .back {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 28px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.card-selected .content-img .back:hover {
+  background: rgba(0, 0, 0, 0.6117647059);
+}
+.card-selected .content-img .img-selected {
+  width: 350px;
+  height: 520px;
+  border: 5px solid #FFFFFF;
+  border-radius: 5px;
+}
+.card-selected .content-img .img-selected img {
+  width: 100%;
+  height: 100%;
+}
+.card-selected .info h2 {
+  font-family: "BIOWEAPON", sans-serif;
+  color: #FFFFFF;
+  font-size: 36px;
+}
+.card-selected .info p {
+  color: #FFFFFF;
+  margin-top: 26px;
+  font-size: 36px;
+  font-family: sans-serif;
+  flex-wrap: wrap;
+}
+.card-selected .buttons .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.card-selected .buttons .avatar .gen {
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  margin-left: 30px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.card-selected .buttons .avatar .gen img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+}
+.card-selected .buttons .avatar .gen:hover {
+  transform: scale(1.2);
+}
+.card-selected .buttons .avatar .gen:hover img {
+  filter: grayscale(0);
+}
+.card-selected .buttons .avatar h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 25%;
+}
+.card-selected .buttons button {
+  width: 100%;
+  height: 60px;
+  margin-top: 20px;
+  border: 5px solid #FFFFFF;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  background: transparent;
+  transition: all 0.15s ease-in;
+  cursor: pointer;
+  font-family: "BIOWEAPON", sans-serif;
+  color: #FFFFFF;
+}
+.card-selected .buttons button:hover {
+  background: #FFFFFF;
+  color: #040429;
+  transform: scale(0.98);
+}
+.card-selected .buttons button:focus {
+  opacity: 70%;
+}
+
+.card-selected.active {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */

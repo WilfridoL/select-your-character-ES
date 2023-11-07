@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selecciona tu personaje</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- seleccion de personaje pantalla inicial -->
+  <div class="container-card ">
+    <div class="img-container">
+      <div class="img" onclick="menu(0)"><img src="img/humano1.webp" alt="Personaje-1"></div>
+      <div class="img" onclick="menu(1)"><img src="img/lobo1.webp" alt="Personaje-2"></div>
+      <div class="img" onclick="menu(2)"><img src="img/vampiro1.webp" alt="Personaje-3"></div>
+      <div class="img" onclick="menu(3)"><img src="img/zombie1.webp" alt="Personaje-4"></div>
+    </div>
+    <div class="title"><h1>SELECCIONA TU PERSONAJE PARA CONTINUAR</h1></div>
+  </div>
+  <!-- personaje seleccionada pantalla final -->
+  <div class="card-selected ">
+    <div class="content-img">
+      <div class="back" id="back"><i class="fa-solid fa-arrow-left"></i></div>
+      <div class="img-selected"><img id="img" alt="personaje-seleccionado"><img id="imgW"></div>
+    </div>
+    <div class="info">
+      <div class="text">
+        <h2>personaje seleccionad<span id="gen">o</span></h2>
+        <p>
+          Nombre:<span id="name"></span><span id="nameW"></span><br>
+          Pais:<span id="coun"></span><br>
+          Raza:<span id="race"></span><br>
+          Habilididad Principal:<span id="skill1"></span><br>
+          Habilidad Secundaria:<span id="skill2"></span>
+        </p>
+      </div>
+      <div class="buttons">
+        <div class="avatar">
+          <div class="">
+            <div class="man gen" onclick="selectedGen('man')" id="man">
+              <img src="img/man.svg" alt="avatar-man">
+            </div>
+            <h4>Macho</h4>
+          </div>
+          <div class="">
+            <div class="women gen" onclick="selectedGen('woman')" id="woman">
+              <img src="img/woman.svg" alt="avatar-woman">
+            </div>
+            <h4>Hembra</h4>
+          </div>
+        </div>
+        <button>aceptar</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/bc3dfab8e3.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>
