@@ -142,20 +142,18 @@ body {
         transition: all .3s ease-in-out;
         // overflow: hidden;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        img {
-          width: 100%;
-          height: 100%;
-          filter: grayscale(100%);
+        i{
+          font-size: 4.5rem;
+          color: $text;
         }
       }
 
       .gen:hover {
         transform: scale(1.2);
-
-        img {
-          filter: grayscale(0);
-        }
       }
 
       h4 {

@@ -116,17 +116,16 @@ body {
   margin-left: 30px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.card-selected .buttons .avatar .gen img {
-  width: 100%;
-  height: 100%;
-  filter: grayscale(100%);
+.card-selected .buttons .avatar .gen i {
+  font-size: 4.5rem;
+  color: #FFFFFF;
 }
 .card-selected .buttons .avatar .gen:hover {
   transform: scale(1.2);
-}
-.card-selected .buttons .avatar .gen:hover img {
-  filter: grayscale(0);
 }
 .card-selected .buttons .avatar h4 {
   display: flex;
