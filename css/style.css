@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "BIOWEAPON";
+  src: url(../BIOWEAPON.ttf) format(truetype);
+}
 * {
   box-sizing: border-box;
   margin: 0;
